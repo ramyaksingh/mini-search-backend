@@ -51,6 +51,7 @@ def signup():
     password = data['password']
 
     print(data)
+    print(User)
     print("2")
     user = User.query.filter_by(username=username, password=password).first()
 
