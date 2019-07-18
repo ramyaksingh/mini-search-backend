@@ -50,6 +50,7 @@ def signup():
     username = data['username']
     password = data['password']
 
+    print(data)
     print("2")
     user = User.query.filter_by(username=username, password=password).first()
 
@@ -64,7 +65,7 @@ def signup():
         db.session.commit()
 
         print("5")
-        
+
         ret = {
             'message': 'SUCCESS',
             'username': username,
