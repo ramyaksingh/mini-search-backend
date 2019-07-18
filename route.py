@@ -43,21 +43,28 @@ def login():
 @cross_origin()
 def signup():
 
-    print("LOLOLOLOL")
+    print("1")
     data = request.get_json()
 
     email = data['email']
     username = data['username']
     password = data['password']
 
-    print("LOLOLOLOL")
+    print("2")
     user = User.query.filter_by(username=username, password=password).first()
+
+    print("3")
+
     if user is None:
+
+        print("4")
 
         user = User(username, password)
         db.session.add(user)
         db.session.commit()
 
+        print("5")
+        
         ret = {
             'message': 'SUCCESS',
             'username': username,
