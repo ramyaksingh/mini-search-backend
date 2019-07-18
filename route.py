@@ -42,12 +42,15 @@ def login():
 @app.route('/api/signup/', methods=['GET', 'POST'])
 @cross_origin()
 def signup():
+
+    print("LOLOLOLOL")
     data = request.get_json()
 
     email = data['email']
     username = data['username']
     password = data['password']
 
+    print("LOLOLOLOL")
     user = User.query.filter_by(username=username, password=password).first()
     if user is None:
 
