@@ -54,7 +54,7 @@ def signup():
     print(User)
     print("2")
     user = User.query.filter_by(username=username, password=password).first()
-
+    print(user)
     print("3")
 
     if user is None:
