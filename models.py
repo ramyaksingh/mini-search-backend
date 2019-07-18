@@ -26,8 +26,7 @@ class User(db.Model):
             self.bookmarks += bookmark
             self.bookmarks += ","
 
-
-     def parsePreferences(self, preference):
+    def parsePreferences(self, preference):
 
         if (preference == "") :
             return []

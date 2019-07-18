@@ -1,2 +1,2 @@
 SQLALCHEMY_TRACK_MODIFICATIONS = False
-#SQLALCHEMY_DATABASE_URI = 'mysql://bb0584343094e7:0528e9d5@us-cdbr-iron-east-01.cleardb.net/heroku_85dca050bae1fd4'
+SQLALCHEMY_DATABASE_URI = 'mysql://b7078f4594c8d2:0fa473d7@us-cdbr-iron-east-02.cleardb.net/heroku_f42847c8e11641b'
