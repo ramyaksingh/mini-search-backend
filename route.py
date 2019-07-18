@@ -61,10 +61,12 @@ def signup():
         print("4")
 
         user = User(username, password)
+        print("5")
         db.session.add(user)
+        print("6")
         db.session.commit()
 
-        print("5")
+        print("7")
 
         ret = {
             'message': 'SUCCESS',
