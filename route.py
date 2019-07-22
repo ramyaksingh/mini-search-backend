@@ -54,14 +54,15 @@ def signup():
     print(User)
     print("2")
     user = User.query.filter_by(username=username, password=password).first()
-    print(user)
+
     print("3")
+
 
     if user is None:
 
         print("4")
 
-        user = User(username, password)
+        user = User(username, email, password)
         print("5")
         db.session.add(user)
         print("6")
