@@ -18,7 +18,7 @@ def login():
     username = data['username']
     password = data['password']
 
-    user = User.query.filter_by(email=username, password=password).first()
+    user = User.query.filter_by(username=username, password=password).first()
 
     if user is None :
         ret = {
@@ -43,32 +43,19 @@ def login():
 @cross_origin()
 def signup():
 
-    print("1")
     data = request.get_json()
 
     email = data['email']
     username = data['username']
     password = data['password']
 
-    print(data)
-    print(User)
-    print("2")
     user = User.query.filter_by(username=username, password=password).first()
-
-    print("3")
-
 
     if user is None:
 
-        print("4")
-
         user = User(username, email, password)
-        print("5")
         db.session.add(user)
-        print("6")
         db.session.commit()
-
-        print("7")
 
         ret = {
             'message': 'SUCCESS',
