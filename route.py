@@ -20,6 +20,7 @@ def login():
 
     user = User.query.filter_by(username=username, password=password).first()
 
+    print(user.bookmarks)
     if user is None :
         ret = {
             'message': 'Failure'
