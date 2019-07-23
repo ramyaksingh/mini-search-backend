@@ -60,7 +60,7 @@ def signup():
         ret = {
             'message': 'SUCCESS',
             'username': username,
-            'boomarks': user.parsePreferences(user.bookmarks),
+            'bookmarks': user.parsePreferences(user.bookmarks),
         }
     else:
         ret = {
