@@ -32,7 +32,7 @@ def login():
         ret = {
             'message': 'SUCCESS',
             'username': username,
-            'boomarks': user.parsePreferences(user.bookmarks),
+            'bookmarks': user.parsePreferences(user.bookmarks),
         }
 
         js = json.dumps(ret)

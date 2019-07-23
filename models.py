@@ -28,6 +28,7 @@ class User(db.Model):
 
     def parsePreferences(self, preference):
 
+        print(preference)
         if (preference == "") :
             return []
 
