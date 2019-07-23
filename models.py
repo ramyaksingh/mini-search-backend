@@ -28,14 +28,9 @@ class User(db.Model):
 
     def parsePreferences(self, preference):
 
-        print(preference)
         if (preference == "") :
             return []
 
         preference_array = preference.split(',')
 
-        print(preference_array)
-        preference_array.pop()
-
-        print(preference_array)
         return preference_array
