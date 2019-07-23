@@ -6,7 +6,7 @@ class User(db.Model):
     username = db.Column(db.String(20), nullable=False)
     email = db.Column(db.String(50), nullable=False)
     password = db.Column(db.String(32), nullable=False)
-    bookmarks = db.Column(db.String(1000), nullable=True)
+    bookmarks = db.Column(db.String(5000), nullable=True)
 
     def __repr__(self):
             return self.username
