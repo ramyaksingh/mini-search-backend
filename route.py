@@ -4,7 +4,7 @@ from flask_json import FlaskJSON, JsonError, json_response, as_json
 import json
 from flask import Response
 from app import app
-from models import User
+from models import User, Stats
 from app import db
 
 FlaskJSON(app)
@@ -98,3 +98,19 @@ def editPreferences():
         js = json.dumps(ret)
         resp = Response(js, status=200, mimetype='application/json')
         return resp
+
+@app.route('/api/viewCounter/', methods=['GET', 'POST'])
+@cross_origin()
+def viewCounter():
+
+    obj = Stats.query.filter_by(numID=1).first()
+    obj.counter += 1
+    db.session.commit()
+
+    ret = {
+        'message': 'SUCCESS',
+        'counter': str(obj.counter),
+    }
+    js = json.dumps(ret)
+    resp = Response(js, status=200, mimetype='application/json')
+    return resp

@@ -34,3 +34,16 @@ class User(db.Model):
         preference_array = preference.split(',')
 
         return preference_array
+
+class Stats(db.Model) :
+    numID = db.Column(db.Integer, primary_key=True)
+    counter =  db.Column(db.Integer, nullable=False)
+
+    def __repr__(self):
+            return self.numID + " " + self.counter
+
+    def __init__(self, id=1, counter=0):
+
+        self.numID=id
+        self.counter=counter
+    
