@@ -15,7 +15,7 @@ html5lib==0.999
 lxml==3.5.0
 numpy==1.14.2
 pexpect==4.0.1
-Pillow==3.1.2
+Pillow==6.2.0
 ptyprocess==0.5
 pycups==1.9.73
 pyxdg==0.25
